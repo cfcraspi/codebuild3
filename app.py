@@ -7,6 +7,10 @@ app = Chalice(app_name='workshop-intro')
 def index():
     return {'hello': 'world'}
 
+@app.route('/hello')
+def hello_workshop():
+    return {'hello': 'workshop'}
+
 
 # The view function above will return {"hello": "world"}
 # whenever you make an HTTP GET request to '/'.
